@@ -1,0 +1,4 @@
+set logging file ./bad1.log
+set trace-commands on
+set logging on
+
