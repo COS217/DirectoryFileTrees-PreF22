@@ -9,6 +9,9 @@
 #include <string.h>
 #include "bdt.h"
 
+/* Tests the BDT implementation with an assortment of checks.
+   Prints the status of the data structure along the way to stderr.
+   Returns 0. */
 int main(void) {
   char* temp;
 
