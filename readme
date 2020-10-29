@@ -106,7 +106,7 @@ write "None."
 
 
 ------------------------------------------------------------------------
-For each of the first three faulty BDT implemenations required by Step
+For each of the first three faulty BDT implementations required by Step
 1.5, identify the function where there is a bug. You do not have to
 identify the bug itself, only its location, but note that this must be
 the location of the underlying error, which is not necessarily where
