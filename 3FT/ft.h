@@ -44,7 +44,7 @@ int FT_rmDir(char *path);
 /*
    Inserts a new file into the hierarchy at the given path, with the
    given contents of size length. The path's parent must exist as
-   a directory.
+   a directory or be able to be created as a directory.
    Returns SUCCESS if the new file is inserted,
    returns INITIALIZATION_ERROR if not in an initialized state,
    returns ALREADY_IN_TREE if the path already exists (as dir or file),
