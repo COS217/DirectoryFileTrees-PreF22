@@ -8,8 +8,8 @@
 
 /*
   A File Tree is a representation of a hierarchy of directories and
-  files. The File Tree is rooted at a directory, directories may
-  be inner nodes or leaves, and files are always leaves.
+  files. The File Tree is rooted at a directory or file, directories
+  may be inner nodes or leaves, and files are always leaves.
 */
 
 #include <stddef.h>
