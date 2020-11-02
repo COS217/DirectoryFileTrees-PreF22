@@ -48,7 +48,7 @@ int FT_rmDir(char *path);
    Returns SUCCESS if the new file is inserted,
    returns INITIALIZATION_ERROR if not in an initialized state,
    returns ALREADY_IN_TREE if the path already exists (as dir or file),
-   returns NO_SUCH_PATH if the path's parent doesn't exist,
+   returns CONFLICTING_PATH if path is not underneath existing root,
    returns NOT_A_DIRECTORY if the path's parent exists as a file,
    returns PARENT_CHILD_ERROR if a new child cannot be added in path,
    returns MEMORY_ERROR if unable to allocate sufficient memory.
