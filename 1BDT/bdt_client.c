@@ -56,7 +56,8 @@ int main(void) {
   fprintf(stderr, "%s\n", temp);
   free(temp);
   assert(BDT_insertPath("a/b/e") == PARENT_CHILD_ERROR);
-
+  assert(BDT_containsPath("a/b/e") == FALSE);
+  
   /* Paths must be unique, but individual directory names needn't be */
   assert(BDT_insertPath("a/b/d/e") == SUCCESS);
   assert(BDT_containsPath("a/b/d/e") == TRUE);

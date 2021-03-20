@@ -1,0 +1,18 @@
+#--------------------------------------------------------------------
+# Makefile for Assignment 4, Part 3 sample implementation
+# Author: Christopher Moretti
+#--------------------------------------------------------------------
+
+CC=gcc217
+
+all: sampleft
+
+clean:
+	rm -f sampleft
+
+clobber: clean
+	rm -f ft_client.o dynarray.o *~
+
+sampleft: dynarray.o ft.o ft_client.o
+	$(CC) dynarray.o ft.o ft_client.o -o sampleft
+

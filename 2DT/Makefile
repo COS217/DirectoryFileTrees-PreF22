@@ -1,7 +1,7 @@
 #--------------------------------------------------------------------
 # Makefile for Assignment 4, Part 2
-# dt* targets are built using checker
-# rules to build dt*.o and node*.o from source will fail
+# dt* targets are built using checkerDT
+# rules to build dt{Bad,Good}*.o and node*.o from source will fail
 # Author: Christopher Moretti
 #--------------------------------------------------------------------
 
@@ -15,25 +15,28 @@ clean:
 	rm -f $(TARGETS) *~
 
 clobber: clean
-	rm -f nodeGood.o dtGood.o dynarray.o checker.o
+	rm -f nodeGood.o dtGood.o dynarray.o checkerDT.o dt_client.o
 
-dt%: dynarray.o node%.o checker.o dt%.o dt_client.c
+dt%: dynarray.o node%.o checkerDT.o dt%.o dt_client.o
 	gcc217 -g $^ -o $@
 
-checker.o: checker.c dynarray.h checker.h node.h a4def.h
+checkerDT.o: checkerDT.c dynarray.h checkerDT.h node.h a4def.h
 	gcc217 -g -c $<
 
 dynarray.o: dynarray.c dynarray.h
 	gcc217 -g -c $<
 
-dtGood.o: dtGood.c dynarray.h dt.h a4def.h node.h checker.h
+dt_client.o: dt_client.c dt.h a4def.h
 	gcc217 -g -c $<
 
-nodeGood.o: nodeGood.c dynarray.h node.h a4def.h
+dtGood.o: dtGood.c dynarray.h dt.h a4def.h node.h checkerDT.h
 	gcc217 -g -c $<
 
-dt%.o: dt%.c dynarray.h dt.h a4def.h node.h checker.h
+nodeGood.o: nodeGood.c dynarray.h node.h a4def.h checkerDT.h
+	gcc217 -g -c $<
+
+dt%.o: dt%.c dynarray.h dt.h a4def.h node.h checkerDT.h
 	$(error "You can't re-build" $<)
 
-node%.o: node%.c dynarray.h node.h a4def.h
+node%.o: node%.c dynarray.h node.h a4def.h checkerDT.h
 	$(error "You can't re-build" $<)

@@ -52,11 +52,12 @@ int main(void) {
      to insert a third child should still succeed, unlike in BDT */
   assert(DT_insertPath("a/b/d") == SUCCESS);
   assert(DT_containsPath("a/b/d") == TRUE);
+  assert(DT_insertPath("a/b/e") == SUCCESS);
+  assert(DT_containsPath("a/b/e") == TRUE);
   assert((temp = DT_toString()) != NULL);
   fprintf(stderr, "%s\n", temp);
   free(temp);
-  assert(DT_insertPath("a/b/e") == SUCCESS);
-
+  
   /* Paths must be unique, but individual directory names needn't be */
   assert(DT_insertPath("a/b/d/e") == SUCCESS);
   assert(DT_containsPath("a/b/d/e") == TRUE);

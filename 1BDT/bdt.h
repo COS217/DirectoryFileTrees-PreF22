@@ -32,7 +32,7 @@ typedef enum bool { FALSE, TRUE } boolean;
 int BDT_insertPath(char* path);
 
 /*
-  Returns TRUE if the tree contains a Node
+  Returns TRUE if the tree contains a node
   representing the full path parameter
   and FALSE otherwise.
 */
