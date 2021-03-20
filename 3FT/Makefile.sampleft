@@ -13,6 +13,6 @@ clean:
 clobber: clean
 	rm -f ft_client.o dynarray.o *~
 
-sampleft: dynarray.o ft.o ft_client.o
-	$(CC) dynarray.o ft.o ft_client.o -o sampleft
+sampleft: dynarray.o sampleft.o ft_client.o
+	$(CC) dynarray.o sampleft.o ft_client.o -o sampleft
 
