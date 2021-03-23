@@ -35,7 +35,7 @@ struct node {
   or NULL if there is an allocation error.
 
   Allocates memory for the returned string,
-  which is then owened by the caller!
+  which is then owned by the caller!
 */
 static char* Node_buildPath(Node_T n, const char* dir) {
    char* path;
