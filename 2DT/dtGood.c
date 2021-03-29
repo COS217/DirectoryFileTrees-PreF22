@@ -104,7 +104,7 @@ static int DT_linkParentToChild(Node_T parent, Node_T child) {
    their fields, returns MEMORY_ERROR
 
    If there is an error linking any of the new nodes,
-   returns PARENT_CHID_ERROR
+   returns PARENT_CHILD_ERROR
 
    Otherwise, returns SUCCESS
 */
