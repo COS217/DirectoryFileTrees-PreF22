@@ -82,12 +82,11 @@ Node_T Node_getParent(Node_T n);
 /*
   Makes child a child of parent, if possible, and returns SUCCESS.
   This is not possible in the following cases:
-  * child's path is not parent's path + / + directory,
-    in which case returns PARENT_CHILD_ERROR
   * parent already has a child with child's path,
-    in which case returns ALREADY_IN_TREE
-  * parent is unable to allocate memory to store new child link,
-    in which case returns MEMORY_ERROR
+    in which case: returns ALREADY_IN_TREE
+  * child's path is not parent's path + / + directory,
+    or the parent cannot link to the child,
+    in which cases: returns PARENT_CHILD_ERROR
  */
 int Node_linkChild(Node_T parent, Node_T child);
 
@@ -109,8 +108,8 @@ int Node_unlinkChild(Node_T parent, Node_T child);
   changed so that the link is bidirectional.)
 
   Returns SUCCESS upon completion, or:
-  MEMORY_ERROR if the new node cannot be created,
   ALREADY_IN_TREE if parent already has a child with that path
+  PARENT_CHILD_ERROR if the new child cannot otherwise be added
 */
 int Node_addChild(Node_T parent, const char* dir);
 
