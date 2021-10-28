@@ -141,6 +141,14 @@ static int DT_insertRestOfPath(char* path, Node_T parent) {
 
    while(dirToken != NULL) {
       new = Node_create(dirToken, curr);
+
+      if(new == NULL) {
+         if(firstNew != NULL)
+            (void) Node_destroy(firstNew);
+         free(copyPath);
+         return MEMORY_ERROR;
+      }
+
       newCount++;
 
       if(firstNew == NULL)
@@ -153,12 +161,6 @@ static int DT_insertRestOfPath(char* path, Node_T parent) {
             free(copyPath);
             return result;
          }
-      }
-
-      if(new == NULL) {
-         (void) Node_destroy(firstNew);
-         free(copyPath);
-         return MEMORY_ERROR;
       }
 
       curr = new;
