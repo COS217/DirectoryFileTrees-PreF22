@@ -22,8 +22,8 @@
    Returns CONFLICTING_PATH if path is not underneath existing root.
    Returns NOT_A_DIRECTORY if a proper prefix of path exists as a file.
    Returns ALREADY_IN_TREE if the path already exists (as dir or file).
-   Returns PARENT_CHILD_ERROR if a new child cannot be added in path.
-   Returns MEMORY_ERROR if unable to allocate sufficient memory.
+   Returns MEMORY_ERROR if unable to allocate any node or any field.
+   Returns PARENT_CHILD_ERROR if a parent cannot link to a new child.
 */
 int FT_insertDir(char *path);
 
@@ -47,12 +47,12 @@ int FT_rmDir(char *path);
    given contents of size length bytes.
    Returns SUCCESS if the new file is inserted.
    Returns INITIALIZATION_ERROR if not in an initialized state.
-   Returns CONFLICTING_PATH if path is not underneath existing root, 
+   Returns CONFLICTING_PATH if path is not underneath existing root,
                             or if path would be the FT root.
    Returns NOT_A_DIRECTORY if a proper prefix of path exists as a file.
    Returns ALREADY_IN_TREE if the path already exists (as dir or file).
-   Returns PARENT_CHILD_ERROR if a new child cannot be added in path.
-   Returns MEMORY_ERROR if unable to allocate sufficient memory.
+   Returns MEMORY_ERROR if unable to allocate any node or any field.
+   Returns PARENT_CHILD_ERROR if a parent cannot link to a new child.
 */
 int FT_insertFile(char *path, void *contents, size_t length);
 

@@ -18,8 +18,8 @@
    returns INITIALIZATION_ERROR if not in an initialized state,
    returns CONFLICTING_PATH if path is not underneath existing root,
    returns ALREADY_IN_TREE if the path already exists,
-   returns PARENT_CHILD_ERROR if a new child cannot be added in path
-   returns MEMORY_ERROR if unable to allocate sufficient memory.
+   Returns MEMORY_ERROR if unable to allocate any node or any field.
+   Returns PARENT_CHILD_ERROR if a parent cannot link to a new child.
 */
 int DT_insertPath(char* path);
 
