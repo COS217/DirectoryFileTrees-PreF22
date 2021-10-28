@@ -11,14 +11,10 @@ Student 2: What is your name?
 
 
 ------------------------------------------------------------------------
-How many late days are you using on this assignment?
-
-
-
-------------------------------------------------------------------------
 Student 1: What authorized sources of information did you use to
 complete the assignment? COPY THE LIST of authorized sources of
-information given in the "Policies" web page to this section of the
+information given in the "Policies" web page (also available on armlab
+in the file ~cos217/AuthorizedSourcesList ) to this section of the
 readme file, and edit it as appropriate.
 
 
@@ -26,7 +22,8 @@ readme file, and edit it as appropriate.
 ------------------------------------------------------------------------
 Student 2: What authorized sources of information did you use to
 complete the assignment? COPY THE LIST of authorized sources of
-information given in the "Policies" web page to this section of the
+information given in the "Policies" web page (also available on armlab
+in the file ~cos217/AuthorizedSourcesList ) to this section of the
 readme file, and edit it as appropriate.
 
 
@@ -127,9 +124,12 @@ the error manifests itself or is "noticed" by the client.
          ./bdtBad3        
 ===============================================================
 
+------------------------------------------------------------------------
+bdtBad4 and bdtBad5 are optional extra credit:
+
 For bdtBad4, you do not have to find the bug. Instead, indicate what
-is different about trying to debug this executable in gdb versus the
-other three:
+is the fundamental difference with trying to debug this executable in
+gdb versus the first three:
 
 
 
