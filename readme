@@ -127,15 +127,18 @@ the error manifests itself or is "noticed" by the client.
 ------------------------------------------------------------------------
 bdtBad4 and bdtBad5 are optional extra credit:
 
-For bdtBad4, you do not have to find the bug. Instead, indicate what
-is the fundamental difference with trying to debug this executable in
-gdb versus the first three:
+For bdtBad4, you do not have to find the bug and simply identifying
+the bug is insufficient to earn the extra credit. Instead, indicate
+what is the fundamental difference with trying to debug this
+executable in gdb versus the first three (Hint: your answer should
+have nothing to do with the program's code.):
 
 
 
-For bdtBad5, you do not have to find the bug. Instead, indicate one
-hypothesis for how the program could crash within the DynArray module,
-which we promise is itself correct:
+For bdtBad5, you do not have to find the bug and simply identifying
+the bug is insufficient to earn the extra credit. Instead, discuss how
+the program could crash within the DynArray module, which we promise is
+correct, while executing a callback function that is, itself, correct:
 
 
 

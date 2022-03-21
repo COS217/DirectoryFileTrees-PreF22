@@ -94,7 +94,7 @@ void *FT_replaceFileContents(char *path, void *newContents,
   returns NO_SUCH_PATH if it does not, and
   returns INITIALIZATION_ERROR if the structure is not initialized.
 
-  When returning SUCCESSS,
+  When returning SUCCESS,
   if path is a directory: *type is set to FALSE, *length is unchanged
   if path is a file: *type is set to TRUE, and
                      *length is set to the length of file's contents.

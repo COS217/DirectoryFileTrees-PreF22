@@ -196,6 +196,7 @@ Node_T Node_getParent(Node_T n) {
 /* see node.h for specification */
 int Node_linkChild(Node_T parent, Node_T child) {
    size_t i;
+   int result;
    char* rest;
 
    assert(parent != NULL);
@@ -203,11 +204,18 @@ int Node_linkChild(Node_T parent, Node_T child) {
    assert(CheckerDT_Node_isValid(parent));
    assert(CheckerDT_Node_isValid(child));
 
-   if(Node_hasChild(parent, child->path, NULL)) {
+   result = Node_hasChild(parent, child->path, NULL);
+   if(result == 1) {
       assert(CheckerDT_Node_isValid(parent));
       assert(CheckerDT_Node_isValid(child));
       return ALREADY_IN_TREE;
    }
+   if(result == -1) {
+      assert(CheckerDT_Node_isValid(parent));
+      assert(CheckerDT_Node_isValid(child));
+      return PARENT_CHILD_ERROR;
+   }
+
    i = strlen(parent->path);
    if(strncmp(child->path, parent->path, i)) {
       assert(CheckerDT_Node_isValid(parent));
